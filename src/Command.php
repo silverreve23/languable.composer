@@ -8,8 +8,10 @@ class Command extends BaseCommand{
 
 	protected $signature = "make:language {class}";
     private $pathLanguages = null;
+    private $pathTranslates = null;
     private $pathStubClass = null;
-    private $stubLanguageClass = null;
+    private $stubLanguageArray = null;
+    private $stubTranslateClass = null;
     
 	protected $description = 'Create language class.';
 
@@ -21,9 +23,17 @@ class Command extends BaseCommand{
             'app/Languages'
         );
         
+        $this->pathTranslates = base_path(
+            'app/resources/lang'
+        );
+        
         $this->pathStubClass 
             = dirname(__FILE__)
             .'/../stubs/class.stub';
+        
+        $this->stubLanguageArray 
+            = dirname(__FILE__)
+            .'/../stubs/array.stub';
 
 	}
 
@@ -34,6 +44,7 @@ class Command extends BaseCommand{
 		$this->info($message);
         $this->parseClass();
         $this->createClass();
+        $this->createLang();
         
 
 	}
@@ -73,6 +84,37 @@ class Command extends BaseCommand{
 			file_put_contents(
 				$nameLanguageClass, 
 				$this->stubLanguageClass
+			);
+							
+			$this->info($message);
+						
+		}else{
+				
+			$this->error($message);
+							
+		}
+        
+    }
+    
+    private function createLang(){
+        
+        $class = $this->argument('class');
+        $class = strtolower($class);
+        
+        $nameTranslatesArray = $this->pathTranslates
+            .'/'
+            .$class
+            .'.php';
+        
+        $message = 'Error! This file language name exist!';		
+			
+		if(!file_exists($nameTranslatesArray)){
+                
+			$message = "Create translate finished!\n";
+					
+			file_put_contents(
+				$nameTranslatesArray, 
+				$this->stubLanguageArray
 			);
 							
 			$this->info($message);
