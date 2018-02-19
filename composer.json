@@ -1,0 +1,18 @@
+{
+    "name": "sbkinfo/languable",
+    "description": "Languages for laravel",
+    "license": "GPL-3.0-only",
+    "authors": [
+        {
+            "name": "Sviatoslav Sabadosh",
+            "email": "silverreve23@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+	"autoload": {
+	    "psr-4": {
+	        "SBKInfo\\Languages\\": "src/"
+	    }
+	}
+}
