@@ -2,9 +2,9 @@
 
 namespace SBKInfo\Languages;
 
-use Illuminate\Console\Command;
+use Illuminate\Console\Command as BaseCommand;
 
-class Command extends Command{
+class Command extends BaseCommand{
 
 	protected $signature = "make:language {class}";
     private $pathLanguages = null;
