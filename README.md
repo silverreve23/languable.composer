@@ -13,7 +13,7 @@
 Run this command in terminal
 
 	composer require "sbkinfo/languable"
-	
+
 Include ServiceProvider in config/app.php
 
 ```php
@@ -26,7 +26,7 @@ Include ServiceProvider in config/app.php
 
 ```
 
-Include Languable in your controller
+Use Languable in your controller
 
 ```php
 
@@ -52,4 +52,25 @@ public function __construct(){
 
 ## Settings
 
-:)
+If you want use other translate language file (resources/lang)
+you need pass to <b>translate</b> method
+path to your custom file, default file path has name as
+name Controller which was called in <b>translate</b> method
+
+```php
+
+public function __construct(){
+
+	$translate = $this->translate('your-path');
+
+}
+
+```
+In order to create Language Class file, you need execute next command
+
+	php artisan make:language Language
+
+If you want create translate file, you need execute command
+with <b>--lang</b> option
+
+	php artisan make:language Language --lang=transfile
