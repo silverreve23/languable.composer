@@ -13,6 +13,18 @@
 Run this command in terminal
 
 	composer require "sbkinfo/languable"
+	
+Include ServiceProvider in config/app.php
+
+```php
+
+'providers' => array(
+
+	SBKInfo\Languages\Provider::class,
+
+)
+
+```
 
 Include Languable in your controller
 

@@ -18,7 +18,7 @@ class Command extends BaseCommand{
 		parent::__construct();
         
         $this->pathLanguages = base_path(
-            'Languages'
+            'app/Languages'
         );
         
         $this->pathStubClass 
