@@ -45,10 +45,15 @@ trait Languable{
 	}
 
 	private function parseTranslate($arrayTranslate = array(), $pathLang){
-
-		foreach($arrayTranslate as $keyTrans)
-			$arrayLanguages[$keyTrans] = trans($pathLang.$keyTrans);
-
+		
+		foreach($arrayTranslate as $keyTrans => $valueTrans)
+			if(!is_numeric($keyTrans))
+				$arrayLanguages[$keyTrans] = $valueTrans;
+			else
+				$arrayLanguages[$valueTrans] = trans(
+					$pathLang.$valueTrans
+				);
+				
 		return @$arrayLanguages ?: array();
 
 	}

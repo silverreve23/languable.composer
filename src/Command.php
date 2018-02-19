@@ -6,10 +6,11 @@ use Illuminate\Console\Command as BaseCommand;
 
 class Command extends BaseCommand{
 
-	protected $signature = "make:language {class}";
+	protected $signature = "make:language {class} {--lang=}";
     private $pathLanguages = null;
     private $pathTranslates = null;
     private $pathStubClass = null;
+    private $pathStubArray = null;
     private $stubLanguageArray = null;
     private $stubTranslateClass = null;
     
@@ -24,14 +25,14 @@ class Command extends BaseCommand{
         );
         
         $this->pathTranslates = base_path(
-            'app/resources/lang'
+            'resources/lang'
         );
         
         $this->pathStubClass 
             = dirname(__FILE__)
             .'/../stubs/class.stub';
         
-        $this->stubLanguageArray 
+        $this->pathStubArray 
             = dirname(__FILE__)
             .'/../stubs/array.stub';
 
@@ -43,6 +44,7 @@ class Command extends BaseCommand{
         
 		$this->info($message);
         $this->parseClass();
+        $this->parseArray();
         $this->createClass();
         $this->createLang();
         
@@ -57,8 +59,16 @@ class Command extends BaseCommand{
         
         $this->stubLanguageClass = str_replace(
             'DummyClass',
-            $class = $this->argument('class'),
+            $this->argument('class'),
             $this->stubLanguageClass
+        );
+        
+    }  
+     
+    private function parseArray(){
+        
+        $this->stubLanguageArray = file_get_contents(
+            $this->pathStubArray
         );
         
     }  
@@ -97,16 +107,18 @@ class Command extends BaseCommand{
     }
     
     private function createLang(){
-        
-        $class = $this->argument('class');
-        $class = strtolower($class);
+		
+		if(!$this->option('lang'))
+			return false;
+		
+		$langFile = $this->option('lang');
         
         $nameTranslatesArray = $this->pathTranslates
             .'/'
-            .$class
+            .$langFile
             .'.php';
         
-        $message = 'Error! This file language name exist!';		
+        $message = 'Error! This file language name exist!';	
 			
 		if(!file_exists($nameTranslatesArray)){
                 
