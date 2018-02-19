@@ -3,7 +3,7 @@
 namespace SBKInfo\Languages;
 
 use Illuminate\Support\ServiceProvider;
-use SBKInfo\Cleanses\Command;
+use SBKInfo\Languages\Command;
 
 class Provider extends ServiceProvider{
 
