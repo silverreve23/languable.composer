@@ -66,7 +66,7 @@ public function __construct(){
 }
 
 ```
-In order to create Language Class file, you need execute next command
+In order to create <b>Language</b> Class file, you need execute next command
 
 	php artisan make:language Language
 
