@@ -1,7 +1,7 @@
-# Languable Package
+# Cleanses
 
 <p align="center">
-    <img src="https://fthmb.tqn.com/wUBSdqKQkQA44cxzpEuzBNuZwxs=/4992x1750/filters:fill(auto,1)/hello-in-eight-different-languages-185250085-5941fb8c3df78c537b32ecac.jpg" width="546">
+    <img src="https://photos.google.com/photo/AF1QipMNTLmrLjkKu3uhNy1irhgfTBDuovBMuqlZSa3O" width="546">
 </p>
 
 <p align="center">
@@ -21,7 +21,7 @@ Include Languable in your controller
 class HomeController extends Controller{
 
 	use SBKInfo\Languages\Languable;
-	
+
 }
 
 ```
@@ -33,8 +33,11 @@ class HomeController extends Controller{
 public function __construct(){
 
 	$translate = $this->translate();
-		
+
 }
 
 ```
 
+## Settings
+
+:)
