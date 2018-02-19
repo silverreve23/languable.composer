@@ -66,6 +66,8 @@ public function __construct(){
 }
 
 ```
+Created file will be in <b>app/Languages</b> folder.
+
 In order to create <b>Language</b> Class file, you need execute next command
 
 	php artisan make:language Language
