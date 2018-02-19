@@ -44,10 +44,10 @@ class Command extends BaseCommand{
             $this->pathStubClass
         );
         
-        $this->stubCleanseClass = str_replace(
+        $this->stubLanguageClass = str_replace(
             'DummyClass',
             $class = $this->argument('class'),
-            $this->stubCleanseClass
+            $this->stubLanguageClass
         );
         
     }  
@@ -56,7 +56,7 @@ class Command extends BaseCommand{
         
         $class = $this->argument('class');
         
-        $nameCleanseClass = $this->pathLanguages
+        $nameLanguageClass = $this->pathLanguages
             .'/'
             .$class
             .'.php';
@@ -66,13 +66,13 @@ class Command extends BaseCommand{
         if(!file_exists($this->pathLanguages))
 			mkdir($this->pathLanguages, 0777);			
 			
-		if(!file_exists($nameCleanseClass)){
+		if(!file_exists($nameLanguageClass)){
                 
 			$message = "Create language finished!\n";
 					
 			file_put_contents(
-				$nameCleanseClass, 
-				$this->stubCleanseClass
+				$nameLanguageClass, 
+				$this->stubLanguageClass
 			);
 							
 			$this->info($message);
