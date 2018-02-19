@@ -1,7 +1,7 @@
 # Cleanses
 
 <p align="center">
-    <img src="https://photos.google.com/photo/AF1QipMNTLmrLjkKu3uhNy1irhgfTBDuovBMuqlZSa3O" width="546">
+    <img src="https://photos.google.com/photo/AF1QipPj6PXtaW5ivSdmIpWcW0jwDBciy-BV5bOTQPPi?sa=X&ved=0ahUKEwjNqI-C-rHZAhVD_KQKHQWqCyoQ9QEILzACUAE" width="546">
 </p>
 
 <p align="center">
