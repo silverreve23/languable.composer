@@ -1,0 +1,28 @@
+<?php
+
+namespace App\Languages;
+
+use SBKInfo\Languages\Contract;
+
+#-------------------------------------------------------------------------------
+# @class DummyClass
+# Class handle translate language
+#-------------------------------------------------------------------------------
+class DummyClass implements Contract{
+
+    #---------------------------------------------------------------------------
+	# @method translate
+	# @access public
+	# @params void
+	# @return array
+	# Metod translate of key language file
+	#---------------------------------------------------------------------------
+	public function translate(){
+
+		return array(
+            
+        );
+
+	}
+
+}
