@@ -27,7 +27,7 @@ trait Languable{
 
 	private function parseLangPath($pathLang, $classLang){
 
-		$classLang = substr(strrchr(__CLASS__, '\\'), 1);
+		$classLang = substr(strrchr(get_called_class(), '\\'), 1);
 		$classLang = substr($classLang, 0, -10);
 		$classLang = strtolower($classLang);
 
@@ -57,10 +57,10 @@ trait Languable{
 
 		$namespaceClassLang = 'App\Languages\\';
 
-		$namespaceClassPos = strrpos(self::class, '\\');
+		$namespaceClassPos = strrpos(get_called_class(), '\\');
 
 		$classNameLang = substr(
-			self::class,
+			get_called_class(),
 			$namespaceClassPos + 1
 		);
 
