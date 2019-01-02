@@ -4,9 +4,9 @@
 [![Total Downloads](https://poser.pugx.org/sbkinfo/cleanses/downloads)](https://packagist.org/packages/sbkinfo/cleanses)
 [![Latest Unstable Version](https://poser.pugx.org/sbkinfo/livereload/v/unstable)](https://packagist.org/packages/sbkinfo/livereload)
 [![License](https://poser.pugx.org/sbkinfo/livereload/license)](https://packagist.org/packages/sbkinfo/livereload)
+[![Daily Downloads](https://poser.pugx.org/sbkinfo/livereload/d/daily)](https://packagist.org/packages/sbkinfo/livereload)
+
 <p align="center">
-	[![Daily Downloads](https://poser.pugx.org/sbkinfo/livereload/d/daily)](https://packagist.org/packages/sbkinfo/livereload)
-	
     <img src="https://lh3.googleusercontent.com/kIES9CeD2TCoxIz_h2FwMGKTlMgkHkE_fBfPvlqnjoo6E5BOSwnZUqyuDszNf_5Lte2rmyhVmbhzc_iAFgIje4UJoIEY6D-sXNvcF3LDVsmV5G60TdQQxr6rm2thU2uDDhXUWDimCbkZlZ7L3N19FKx4JnhBcHz6MkmN1ZZH8JSe6X6m2roQVxmtUado0M9QN4-Ys-HcTDtidioGh_Z1x0SsBo_RUsodJiIyNROdZLryS2xSP3lfByUQS9hb3gHrkxGQ3yw3Rd1bGJwREiZSnL6hu6WKZBIK8nkg52OorkTY4qPC6Q0KoKZTjUEH2qqwFAtuAaNgF2g7tIABzFIoW1nLJSUN96EB4o0-TBxA1lvDF1fHDwZ-ABpoz1qGRMEnV6C84dW0RWfCiuqU3fDhHginNu1ZK1gS5SH4mLI-tSHRa1iH_MDy9G7-zSIws6UhHmZ2dKhpRM-jh_oR4ZVv5rUVe50hi17LXuvJZ0pCuBHj1XEkn9fJUwNpDfgcJmB2iDbPRFXjwdmCr8oaLpyoBXKoyYMnpsxcsLl4_SxMhR-ZcKoYmWba-r-s5d23in5Y-_dZMhTaZDP3vVmTaNRfzEC8eoEjnVo-rF1TbKQ=w900-h490-no" width="546">
 </p>
 <p align="center">
